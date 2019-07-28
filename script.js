@@ -30,6 +30,7 @@ rows.addEventListener('keyup', e => {
   const valueLimit = Number(e.target.value)
   // console.log(typeof valueLimit)
 
+
   if(valueLimit){
     if(valueLimit > 50){
       // console.log(valueLimit)
@@ -48,6 +49,7 @@ rows.addEventListener('keyup', e => {
 })
 
 gridBtn.addEventListener('click', evn => {
+  locationBox.innerHTML = '';
   divGrid.innerHTML = ''
   const rowsNumber = rows.value;
   const columnsNumber = columns.value;
