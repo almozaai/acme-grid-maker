@@ -8,43 +8,41 @@ const rowLimit = document.querySelector('#rowLimit');
 
 columns.addEventListener('keyup', e => {
   const valueLimit = Number(e.target.value)
-  // console.log()
   if(valueLimit){
     if(valueLimit > 50){
       rowLimit.innerHTML = ''
       columnLimit.innerHTML = 'rows must be between 1 and 50'
       columnLimit.style.color = 'red'
+      gridBtn.disabled = true;
     } else {
       columnLimit.innerHTML = ''
-      // console.log(valueLimit)
+      gridBtn.disabled = false;
     }
   } else {
-    console.log(valueLimit)
     columnLimit.innerHTML = ''
     columnLimit.innerHTML = 'rows must be valid number'
     columnLimit.style.color = 'red'
+    gridBtn.disabled = true;
   }
 })
 
 rows.addEventListener('keyup', e => {
   const valueLimit = Number(e.target.value)
-  // console.log(typeof valueLimit)
-
-
   if(valueLimit){
     if(valueLimit > 50){
-      // console.log(valueLimit)
       rowLimit.innerHTML = ''
       rowLimit.innerHTML = 'rows must be between 1 and 50'
       rowLimit.style.color = 'red'
+      gridBtn.disabled = true;
     } else {
+      gridBtn.disabled = false;
       rowLimit.innerHTML = ''
-      // console.log(valueLimit)
     }
   } else {
     rowLimit.innerHTML =''
     rowLimit.innerHTML = 'rows must be valid number'
     rowLimit.style.color = 'red'
+    gridBtn.disabled = true;
   }
 })
 
